@@ -1,0 +1,30 @@
+{
+  "name": "base-triangle-arbitrage",
+  "version": "1.0.0",
+  "description": "Base链闪电贷三角套利机器人 - USDT → ETH → WBTC → USDT",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node tests/arbitrage.test.js",
+    "deploy": "npx hardhat run scripts/deploy.js --network base"
+  },
+  "keywords": [
+    "arbitrage",
+    "flash-loan",
+    "base",
+    "defi",
+    "triangle"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.10.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
+  }
+}
