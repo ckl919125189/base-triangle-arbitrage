@@ -1,30 +1,33 @@
 {
   "name": "base-triangle-arbitrage",
   "version": "1.0.0",
-  "description": "Base链闪电贷三角套利机器人 - USDT → ETH → WBTC → USDT",
-  "main": "src/index.js",
+  "description": "Triangle arbitrage smart contract for Base chain",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js",
-    "test": "node tests/arbitrage.test.js",
-    "deploy": "npx hardhat run scripts/deploy.js --network base"
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "deploy": "hardhat run scripts/deploy.js --network",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network baseSepolia",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network base",
+    "node": "hardhat node",
+    "dashboard": "npx serve src/dashboard -p 3000"
   },
   "keywords": [
     "arbitrage",
-    "flash-loan",
-    "base",
     "defi",
-    "triangle"
+    "base",
+    "ethereum",
+    "flash-loan"
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "axios": "^1.6.0",
-    "dotenv": "^16.3.1",
-    "ethers": "^6.10.0"
-  },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
-    "hardhat": "^2.19.0"
-  }
+    "@openzeppelin/contracts": "^4.9.5",
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {}
 }
